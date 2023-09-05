@@ -1,0 +1,25 @@
+ERROR    page.Engineering_report.E_report:E_report.py:225 选择过程中发生错误：Message: no such frame
+  (Session info: chrome=112.0.5615.121)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x009FDCE3+50899]
+	(No symbol) [0x0098E111]
+	(No symbol) [0x00895450]
+	(No symbol) [0x008988C9]
+	(No symbol) [0x008EF251]
+	(No symbol) [0x008DB8FC]
+	(No symbol) [0x008EE01C]
+	(No symbol) [0x008DB6F6]
+	(No symbol) [0x008B7708]
+	(No symbol) [0x008B886D]
+	GetHandleVerifier [0x00C63EAE+2566302]
+	GetHandleVerifier [0x00C992B1+2784417]
+	GetHandleVerifier [0x00C9327C+2759788]
+	GetHandleVerifier [0x00A95740+672048]
+	(No symbol) [0x00998872]
+	(No symbol) [0x009941C8]
+	(No symbol) [0x009942AB]
+	(No symbol) [0x009871B7]
+	BaseThreadInitThunk [0x751B00C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77297B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297AEE+238]

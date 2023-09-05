@@ -1,0 +1,56 @@
+问题：我想把登录的方法写成全数驱，并且把配置文件放在数据库上，如何操作？
+
+import yaml
+import sqlite3
+
+def read_config_from_database(database_file):
+    # 连接到数据库
+    conn = sqlite3.connect(database_file)
+    cursor = conn.cursor()
+
+    # 读取配置数据
+    cursor.execute("SELECT * FROM config")
+    rows = cursor.fetchall()
+
+    # 关闭数据库连接
+    cursor.close()
+    conn.close()
+
+    # 将数据库中的数据转换为字典格式
+    config = {}
+    for row in rows:
+        config[row[0]] = row[1]
+
+    return config
+
+def write_config_to_database(database_file, config):
+    # 连接到数据库
+    conn = sqlite3.connect(database_file)
+    cursor = conn.cursor()
+
+    # 清空原有的配置表
+    cursor.execute("DELETE FROM config")
+
+    # 写入配置数据
+    for key, value in config.items():
+        cursor.execute("INSERT INTO config VALUES (?, ?)", (key, value))
+
+    # 提交事务并关闭数据库连接
+    conn.commit()
+    cursor.close()
+    conn.close()
+
+def login(config):
+    # 从配置中读取登录信息
+    username = config.get('username')
+    password = config.get('password')
+    locator_method = config.get('locator_method')
+    locator_value = config.get('locator_value')
+
+    # 执行登录操作
+    print(f"使用用户名 {username} 和密码 {password} 进行登录，定位方法为 {locator_method}，定位元素为 {locator_value}")
+
+# 示例用法
+database_file = 'config.db'
+config = read_config_from_database(database_file)
+login(config)

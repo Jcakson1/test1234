@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Aug 31 18:04:51 CST 2023","Thu Aug 31 18:04:51 CST 2023","0","我是parent_suite","我是suite","我是sub_suite","","","test_0020",""
+"skipped","Thu Aug 31 18:04:48 CST 2023","Thu Aug 31 18:04:48 CST 2023","0","我是parent_suite","我是suite","我是sub_suite","","","我是标题","这是一个测试用例的描述"
+"passed","Thu Aug 31 18:04:45 CST 2023","Thu Aug 31 18:04:45 CST 2023","454","test_case","test_E_report","TestLogin","","","test_002",""
+"passed","Tue Aug 29 17:42:24 CST 2023","Tue Aug 29 17:42:24 CST 2023","442","test_case","test_E_report","TestLogin","","","test_002",""
+"passed","Tue Aug 29 17:42:29 CST 2023","Tue Aug 29 17:42:36 CST 2023","6568","test_case","test_E_report","Test_report","","","test_001",""
+"passed","Thu Aug 31 17:21:58 CST 2023","Thu Aug 31 17:21:58 CST 2023","0","我是parent_suite","我是suite","我是sub_suite","","","test_002",""
